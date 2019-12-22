@@ -7,6 +7,7 @@ package com.coolweather.android.db;
 public class Province extends DataSupport {
     private int id;
     private  String provinceNmae;
+    private int provinceCode;
     public int getId(){
         return id;
     }
