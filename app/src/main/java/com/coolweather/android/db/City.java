@@ -4,7 +4,7 @@ package com.coolweather.android.db;
  * Created by MoBai on 2019/12/22.
  */
 
-public class City extends DataSupport{
+public class City extends LitePalSupport{
     private int id;
     private String cityName;
     private int cityCode;

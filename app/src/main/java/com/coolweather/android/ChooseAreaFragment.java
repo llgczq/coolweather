@@ -104,7 +104,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryProvinces() {
         titleText.setText("中国");
         backButton.setVisibility(View.GONE);
-        provinceList = DataSupport.findAll(Province.class);
+        provinceList = LitePalSupport.findAll(Province.class);
         if (provinceList.size() > 0) {
             datalist.clear();
             for (Province province : provinceList) {
@@ -122,7 +122,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCities() {
         titleText.setText(selectedProvince.getProvinceName());
         backButton.setVisibility(View.VISIBLE);
-        cityList = DataSupport.where("provinceid = ?", String.valueOf(selectedProvince.getId()))
+        cityList = LitePalSupport.where("provinceid = ?", String.valueOf(selectedProvince.getId()))
                 .find(City.class);
         if (cityList.size() > 0) {
             datalist.clear();
@@ -142,7 +142,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCounties() {
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
-        countyList = DataSupport.where("cityid = ?", String.valueOf(selectedCity.getId()))
+        countyList =LitePalSupport.where("cityid = ?", String.valueOf(selectedCity.getId()))
                 .find(City.class);
         if (countyList.size() > 0) {
             datalist.clear();
