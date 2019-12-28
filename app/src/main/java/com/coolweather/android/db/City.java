@@ -1,10 +1,13 @@
 package com.coolweather.android.db;
+import org.litepal.crud.DataSupport;
+
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by MoBai on 2019/12/22.
  */
 
-public class City extends LitePalSupport{
+public class City extends DataSupport{
     private int id;
     private String cityName;
     private int cityCode;

@@ -2,7 +2,6 @@ package com.coolweather.android.gson;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.nio.file.attribute.BasicFileAttributes;
 import java.util.List;
 
 /**
